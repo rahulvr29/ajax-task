@@ -32,7 +32,7 @@ $(document).ready(function () {
         type: "POST",
         url: "login.php",
         data: formData,
-        // dataType: "html",
+        dataType: "html",
         success: function (response) {
             $("#response").html(response);
             // Redirect to dashboard.php after successful login
