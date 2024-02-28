@@ -2,7 +2,6 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   margin: 0;
-  padding: 0;
 }
 
 #login-container, #dashboard-container, #register-container {
@@ -21,7 +20,21 @@ input[type="text"], input[type="password"], button {
   border: 1px solid #ccc;
   border-radius: 3px;
 }
-
+#dashboard-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: black;
+  color: #ffffff;
+}
+#dashboard-container #logout{
+  background-color: red !important;
+  color: white;
+}
+#dashboard-container #add-user{
+  background-color: blue !important;
+  color: white;
+}
 button {
   background-color: #4CAF50;
   color: white;
@@ -31,8 +44,4 @@ button {
 
 button:hover {
   background-color: #45a049;
-}
-
-#error {
-  color: red;
 }

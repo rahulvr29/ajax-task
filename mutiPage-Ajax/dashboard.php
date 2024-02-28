@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(!isset($_SESSION['username'])) {
-        header("Location: index.php");
+        header("Location: index.html");
         exit();
     }
 ?>
@@ -16,9 +16,12 @@
 </head>
 <body>
     <div id="dashboard-container">
-        <h2>Welcome <?php echo $_SESSION['username']; ?></h2>
+        <center>
+        <h2>Welcome <?php echo strtoupper($_SESSION['username']); ?></h2>
+        </center>
         <button id="add-user">Add User</button>
-        <button id="logout">Logout</button>
+        
+        <button id="logout" >Logout</button>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
