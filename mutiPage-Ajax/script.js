@@ -24,6 +24,15 @@ $(document).ready(function () {
   // Login Form Submission
   $("#login-form").submit(function (e) {
     e.preventDefault();
+    // Get values from input fields
+    var username = $("#new-username").val().trim();
+    var password = $("#new-password").val().trim();
+    
+    // Check if any field is empty
+    if (username === '' || password === '') {
+        $("#response").html("Please fill in all fields.");
+        return; // Stop further execution
+    }
     var formData = {
         username: $("#username").val(),
         password: $("#password").val()
