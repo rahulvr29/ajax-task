@@ -34,7 +34,7 @@
         timeout = setTimeout(function() {
             // Redirect to logout page or perform logout action
             window.location.href = 'index.html';
-        }, sessionTimeout * 1000); // Convert seconds to milliseconds
+        }, sessionTimeout * 10000); // Convert seconds to milliseconds
     }
 
     // Start the timer when the page is loaded

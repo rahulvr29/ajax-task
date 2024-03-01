@@ -7,7 +7,7 @@
     <title>Register</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<style>
+<!-- <style>
     ::selection {
         background-color: gray;
     }
@@ -83,7 +83,7 @@
         background-color: antiquewhite;
         box-shadow: none;
     }
-</style>
+</style> -->
 
 <body>
 
