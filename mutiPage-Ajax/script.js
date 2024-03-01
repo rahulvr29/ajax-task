@@ -1,38 +1,9 @@
 $(document).ready(function () {
 
-
-  var sessionTimeout = 10; // Timeout in seconds
-    var timeout;
-
-    function startTimer() {
-        timeout = setTimeout(function() {
-            // Redirect to logout page or perform logout action
-            window.location.href = 'index.html';
-        }, sessionTimeout * 1000); // Convert seconds to milliseconds
-    }
-
-    // Start the timer when the page is loaded
-    startTimer();
-
-    // Reset the timer when there's any activity (e.g., mousemove, keypress)
-    $(document).on('mousemove keypress', function() {
-        clearTimeout(timeout);
-        startTimer();
-    });
-
-
   // Login Form Submission
   $("#login-form").submit(function (e) {
     e.preventDefault();
-    // Get values from input fields
-    var username = $("#new-username").val().trim();
-    var password = $("#new-password").val().trim();
     
-    // Check if any field is empty
-    if (username === '' || password === '') {
-        $("#response").html("Please fill in all fields.");
-        return; // Stop further execution
-    }
     var formData = {
         username: $("#username").val(),
         password: $("#password").val()

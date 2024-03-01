@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $new_password = $_POST['new-password'];
 
     if (empty($new_username) || empty($new_password)) {
-        echo '<span style="color: red;">Please enter both username and password.</span>';
+        echo 'Please enter both username and password.';
     } else {
         // Store new user information in a file (dummy implementation)
         $file = 'users.txt';

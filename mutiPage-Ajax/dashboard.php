@@ -26,5 +26,25 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        var sessionTimeout = 10; // Timeout in seconds
+    var timeout;
+
+    function startTimer() {
+        timeout = setTimeout(function() {
+            // Redirect to logout page or perform logout action
+            window.location.href = 'index.html';
+        }, sessionTimeout * 1000); // Convert seconds to milliseconds
+    }
+
+    // Start the timer when the page is loaded
+    startTimer();
+
+    // Reset the timer when there's any activity (e.g., mousemove, keypress)
+    $(document).on('mousemove keypress', function() {
+        clearTimeout(timeout);
+        startTimer();
+    });
+    </script>
 </body>
 </html>
